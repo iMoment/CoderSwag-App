@@ -33,25 +33,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uhs-6I-goL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uhs-6I-goL">
                                 <rect key="frame" x="0.0" y="70" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="144" id="70T-or-9EC" customClass="CategoryCell" customModule="CoderSwag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="144" id="70T-or-9EC" customClass="CategoryCell" customModule="CoderSwag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="70T-or-9EC" id="gl3-gA-14l">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="ZIn-Um-zO9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="137.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hK-S5-5jH">
                                                     <rect key="frame" x="109.5" y="58" width="156" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="37B-DJ-xW4"/>
-                                                        <constraint firstAttribute="width" constant="156" id="YlT-Wg-w90"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="156" id="YlT-Wg-w90"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,11 +59,11 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ZIn-Um-zO9" firstAttribute="top" secondItem="gl3-gA-14l" secondAttribute="top" id="19i-6y-syr"/>
                                                 <constraint firstItem="ZIn-Um-zO9" firstAttribute="leading" secondItem="gl3-gA-14l" secondAttribute="leading" id="3ie-np-kGl"/>
                                                 <constraint firstItem="9hK-S5-5jH" firstAttribute="centerY" secondItem="gl3-gA-14l" secondAttribute="centerY" id="5NF-pH-tHc"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZIn-Um-zO9" secondAttribute="trailing" id="CxO-Xy-5Wb"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZIn-Um-zO9" secondAttribute="bottom" id="dsS-Fz-c60"/>
+                                                <constraint firstItem="ZIn-Um-zO9" firstAttribute="top" secondItem="gl3-gA-14l" secondAttribute="top" constant="3" id="PE8-Ub-TIR"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZIn-Um-zO9" secondAttribute="bottom" constant="3" id="ZYk-fT-Xaa"/>
                                                 <constraint firstItem="9hK-S5-5jH" firstAttribute="centerX" secondItem="gl3-gA-14l" secondAttribute="centerX" id="joV-6f-73X"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -78,6 +78,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uhs-6I-goL" firstAttribute="top" secondItem="U7E-dc-oND" secondAttribute="bottom" constant="16" id="Bfp-C9-0Hu"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U7E-dc-oND" secondAttribute="trailingMargin" id="Csh-7g-F3s"/>
                             <constraint firstItem="U7E-dc-oND" firstAttribute="top" secondItem="bzN-nl-2T2" secondAttribute="bottom" constant="30" id="ebE-E2-nmW"/>
                             <constraint firstItem="Vnr-XT-Y6X" firstAttribute="top" secondItem="uhs-6I-goL" secondAttribute="bottom" id="ee7-J5-SeJ"/>
                             <constraint firstItem="U7E-dc-oND" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gMv-OA-t16"/>
@@ -87,7 +88,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="CODER SWAG" id="jKn-2K-rtE"/>
                     <connections>
-                        <outlet property="categoryTableView" destination="uhs-6I-goL" id="vxe-yU-MaV"/>
+                        <outlet property="categoryTableView" destination="uhs-6I-goL" id="S7N-n4-30D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
